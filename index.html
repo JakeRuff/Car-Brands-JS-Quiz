@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <title>Car Brands Quiz</title>
+    <style>
+        html { 
+            background: url(bg.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
+            overscroll-behavior: none;
+        }
+        body {
+            
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+        }
+
+        #main {
+            width: 80%;
+            max-width: 900px;
+            border: 0px rgb(0, 0, 0) solid;
+            margin: auto;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 30px black;
+            margin-top: 50px;
+        }
+
+        #header {
+            margin-top: 0;
+            border: 0px solid black;
+            border-radius: 10px;
+            padding: 5px;
+            height: 250px;
+            background: rgb(31, 31, 30);
+            background-image: url("gifs/header.gif");
+            color: white;
+            background-size: cover;
+            box-shadow: 0px 0px 7px black;
+        }
+
+        label {
+            display: block;
+            margin: 30px;
+        }
+
+        input {
+            width: 30px;
+            margin-left: 20px;
+        }
+
+        h2 {
+            clear: both;
+            margin-top: 20px;
+            text-align: center;
+            color: #00000;
+        }
+
+        .image {
+            width: 30%;
+            margin-left: 60px;
+        }
+
+        fieldset {
+            overflow: hidden;
+            width: 95%;
+            position: relative;
+            border: 0px solid black;
+            padding: 10px;
+            border-radius: 0px;
+            border-color: rgb(37, 37, 37);
+            max-width: 100%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .button {
+            background-color: white;
+            border: 2px solid rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 18px;
+            border-radius: 12px;
+            -webkit-transition-duration: 0.4s;
+            margin:0 auto;
+         
+        }
+
+        .button:hover {
+            background-color: rgb(32, 32, 32);
+            color: white;
+        }
+
+        h1 {
+            font-family: 'Work Sans', sans-serif;
+            color:rgb(255, 255, 255);
+            margin-top: 10px;
+            font-weight: 600;
+            text-shadow: 2px 2px 1px #161616;
+            -webkit-text-stroke: 1px black;
+
+        }
+
+        input[name=infin] {
+            display: none;
+        }
+
+        input:checked+label img {
+            border: 2px solid rgb(92, 92, 235);
+            border-radius: 5px;
+        }
+        #footer {
+            color: azure;
+            font-weight: 800;
+        }
+
+        a:visited {
+            color:azure;
+        }
+        
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script>
+    <link href="https://unpkg.com/webkul-micron@1.1.6/dist/css/micron.min.css" type="text/css" rel="stylesheet">
+    <script src="https://unpkg.com/webkul-micron@1.1.6/dist/script/micron.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    
+    <div id="main">
+        <div id="header">
+            <h1 align="center">Do you know your car brands?</h1>
+        </div>
+        <form id="form1">
+            <fieldset>
+                <table align="center">
+                    <tr>
+                        <td>
+
+                            <img src="logos/audi.png" width=250px>
+                            <label for="audi_mazda"><input type="radio" name="audi" value="0"
+                                    id="audi_mazda" />Mazda</label>
+                            <label for="audi_hyundai"><input type="radio" name="audi" value="0"
+                                    id="audi_hyundai" />Hyundai</label>
+                            <label for="audi_audi"><input type="radio" name="audi" value="10"
+                                    id="audi_audi" />Audi</label>
+                            <label for="audi_mitsubishi"><input type="radio" name="audi" value="0"
+                                    id="audi_mitsubishi" />Mitsubishi</label>
+
+                        </td>
+
+
+                        <td>
+
+                            <img src="logos/cadillac.png" width=250px>
+                            <label for="cadi_buick"><input type="radio" name="cadi" value="0"
+                                    id="cadi_buick" />Buick</label>
+                            <label for="cadi_cadi"><input type="radio" name="cadi" value="10"
+                                    id="cadi_cadi" />Cadillac</label>
+                            <label for="cadi_chevy"><input type="radio" name="cadi" value="0"
+                                    id="cadi_chevy" />Chevrolet</label>
+                            <label for="cadi_bmw"><input type="radio" name="cadi" value="0" id="cadi_bmw" />BMW</label>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img src="logos/ferrari.png" width=120px height=200px hspace="60">
+                            <label for="fer_lamb"><input type="radio" name="fer" value="0"
+                                    id="fer_lamb" />Lamborghini</label>
+                            <label for="fer_bugatti"><input type="radio" name="fer" value="0"
+                                    id="fer_bugatti" />Bugatti</label>
+                            <label for="fer_porshe"><input type="radio" name="fer" value="0"
+                                    id="fer_porshe" />Porshe</label>
+                            <label for="fer_ferrari"><input type="radio" name="fer" value="10"
+                                    id="fer_ferrari" />Ferrari</label>
+
+                        </td>
+
+
+                        <td align="center">
+
+                            <h3>Select the correct logo for Infiniti</h3>
+                            <input name="infin" value="10" type="radio" id="infin_infiniti">
+                            <label for="infin_infiniti">
+                              <img src="logos/infiniti.png" width="80px" height="50px">
+                            </label>
+                
+                            <input name="infin" value="0" type="radio" id="infin_lexus">
+                            <label for="infin_lexus">
+                              <img src="logos/lexus.png" width="80px" height="50px">
+                            </label>
+                          
+                            <input name="infin" value="0" type="radio" id="infin_mazda">
+                            <label for="infin_mazda">
+                              <img src="logos/mazda.png" width="70" height="50px" hspace="4">
+                            </label>
+                        
+                            <input name="infin" value="0"  type="radio" id="infin_hyundai">
+                            <label for="infin_hyundai">
+                              <img src="logos/hyundai.png" width="100px" height="50px">
+                            </label>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+
+                            <img src="logos/chevrolet.png" width=250px>
+                            <label for="chevy_ford"><input type="radio" name="chevy" value="0"
+                                    id="chevy_ford" />Ford</label>
+                            <label for="chevy_dodge"><input type="radio" name="chevy" value="0"
+                                    id="chevy_dodge" />Dodge</label>
+                            <label for="chevy_chevy"><input type="radio" name="chevy" value="10"
+                                    id="chevy_chevy" />Chevrolet</label>
+                            <label for="chevy_gmc"><input type="radio" name="chevy" value="0" id="chevy_gmc" />GMC</label>
+                        </td>
+                        <td>
+
+
+                            <img src="logos/porshe.png" width=120px height=150px hspace="50">
+                            <label for="porshe_ferrari"><input type="radio" name="porshe" value="0"
+                                    id="porshe_ferrari" />Ferrari</label>
+                            <label for="porshe_porshe"><input type="radio" name="porshe" value="10"
+                                    id="porshe_porshe" />Porshe</label>
+                            <label for="porshe_lambo"><input type="radio" name="porshe" value="0"
+                                    id="porshe_lambo" />Lamborghini</label>
+                            <label for="porshe_maserati"><input type="radio" name="porshe" value="0" id="porshe_maserati" />Maserati</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>Which company invented the first automobile?</h3>
+                            <label for="firstcar_fiat"><input type="radio" name="firstcar" value="0" id="firstcar_fiat" />Fiat</label>
+                            <label for="firstcar_ford"><input type="radio" name="firstcar" value="0" id="firstcar_ford" />Ford</label>
+                            <label for="firstcar_benz"><input type="radio" name="firstcar" value="10" id="firstcar_benz" />Mercedes-Benz</label>
+                            <label for="firstcar_cadi"><input type="radio" name="firstcar" value="0"
+                                    id="firstcar_cadi" />Cadillac</label>
+                        </td>
+
+                        <td>
+                            <img src="logos/mitsubishi.png" width=130px height=110px hspace=50>
+                            <label for="mitsu_mazda"><input type="radio" name="mitsu" value="0"
+                                    id="mitsu_mazda" />Mazda</label>
+                            <label for="mitsu_hyundai"><input type="radio" name="mitsu" value="0"
+                                    id="mitsu_hyundai" />Hyundai</label>
+                            <label for="mitsu_suzuki"><input type="radio" name="mitsu" value="0"
+                                    id="mitsu_suzuki" />Suzuki</label>
+                            <label for="mitsu_mitsubishi"><input type="radio" name="mitsu" value="10"
+                                    id="mitsu_mitsubishi" />Mitsubishi</label>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <img src="logos/buick.png" width=120px height=110px hspace=50>
+                            <label for="buick_chrysler"><input type="radio" name="buick" value="0" id="buick_chrysler" />Chrysler</label>
+                            <label for="buick_lincoln"><input type="radio" name="buick" value="0" id="buick_lincoln" />Lincoln</label>
+                            <label for="buick_mercury"><input type="radio" name="buick" value="0" id="buick_mercury" />Mercury</label>
+                            <label for="buick_buick"><input type="radio" name="buick" value="10"
+                                    id="buick_buick" />Buick</label>
+                        </td>
+
+                        <td>
+
+                            <img src="logos/alfa_romero.png" width=110px height=110px hspace=50>
+                            <label for="alfa_bugatti"><input type="radio" name="alfa" value="0" id="alfa_bugatti" />Bugatti</label>
+                            <label for="alfa_romero"><input type="radio" name="alfa" value="10" id="alfa_romero" />Alfa Romero</label>
+                            <label for="alfa_fiat"><input type="radio" name="alfa" value="0" id="alfa_fiat" />Fiat</label>
+                            <label for="alfa_maserati"><input type="radio" name="alfa" value="0"
+                                    id="alfa_maserati" />Maserati</label>
+                        </td>
+                    </tr>
+                </table>
+            </br>
+        </br>
+                <button type="submit" value="Submit" class="button" data-micron="jerk"
+
+                >Submit</button>
+                
+
+
+                <h2>Your grade is: <span id="grade">__</span></h2>
+                <p id="grade2" align="center"></p>
+
+            </fieldset>
+        </form>
+
+        <script>
+
+
+
+
+
+
+            document.getElementById("form1").onsubmit = function () {
+                audi = parseInt(document.querySelector('input[name = "audi"]:checked').value);
+                cadi = parseInt(document.querySelector('input[name = "cadi"]:checked').value);
+                fer = parseInt(document.querySelector('input[name = "fer"]:checked').value);
+                infin = parseInt(document.querySelector('input[name = "infin"]:checked').value);
+                chevy = parseInt(document.querySelector('input[name = "chevy"]:checked').value);
+                porshe = parseInt(document.querySelector('input[name = "porshe"]:checked').value);
+                firstcar = parseInt(document.querySelector('input[name = "firstcar"]:checked').value);
+                mitsu = parseInt(document.querySelector('input[name = "mitsu"]:checked').value);
+                buick = parseInt(document.querySelector('input[name = "buick"]:checked').value);
+                alfa = parseInt(document.querySelector('input[name = "alfa"]:checked').value);
+
+
+                result = audi + cadi + fer + infin + chevy + porshe + firstcar + mitsu + buick + alfa;
+
+                
+
+                grading = [
+                    { score: (0), feedback: "Wow really? you have no clue?<br/><br/> <img src= 'gifs/terrible.gif'width='300'  />" },
+                    { score: (10), feedback: "Do you even drive?<br/> <br/><img src= 'gifs/terrible.gif'width='300'  />" },
+                    { score: (20), feedback: "Do you even drive?<br/><br/> <img src= 'gifs/terrible.gif' width='300' />" },
+                    { score: (30), feedback: "Do you even drive?<br/><br/> <img src= 'gifs/fail.gif'width='300'  />" },
+                    { score: (40), feedback: "Do you even drive?<br/><br/> <img src= 'gifs/fail.gif' width='300' />" },
+                    { score: (50), feedback: "You're halfway there.<br/> <br/><img src= 'gifs/almost.gif'width='300'  />" },
+                    { score: (60), feedback: "You can do better...<br/><br/> <img src= 'gifs/almost.gif'width='300'  />" },
+                    { score: (70), feedback: "If this were a test, at least you made a C<br/><br/> <img src= 'gifs/almost.gif' width='300' />" },
+                    { score: (80), feedback: "You missed two<br/><br/> <img src= 'gifs/nearly.gif'width='300'  />" },
+                    { score: (90), feedback: "One more!<br/> <br/> <img src= 'gifs/nearly.gif'width='300'  />" },
+                    { score: (100), feedback: "Looks like you're a car expert!<br/> <br/><img src= 'gifs/perfect.gif' width='300'  />"},
+                ];
+
+                for (i = 0; i < grading.length; i++) {
+                    if (result == grading[i].score) {
+                        result2 = grading[i].feedback;
+                        if (grading[i].score == 100) {
+                            confetti.start(3200, 100, 200);
+                        }
+                    }
+                }
+                
+                document.getElementById("grade").innerHTML = result;
+                
+                document.getElementById("grade2").innerHTML = result2;
+
+
+                return false; // required to not refresh the page; just leave this here
+            } //this ends the submit function
+
+        </script>
+
+
+    </div>
+</br>
+    <p id="footer" align="center">Created by <a href="https://www.jakeruff.com">Jake Ruff</a></p>
+</body>
+
+
+</html>
