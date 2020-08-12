@@ -7,6 +7,7 @@
 * HTML
 * CSS
 * JavaScript
+* confetti.js [thanks mathusummut](https://github.com/mathusummut)
 
 
 ## Live Demo
